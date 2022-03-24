@@ -8,17 +8,18 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-strategy:
-  matrix:
-    Python36:
-      python.version: '3.6'
-
 
 steps:
 - task: UsePythonVersion@0
   inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+    versionSpec: '3.6'
+
+- task: PythonScript@0
+  inputs:
+    scriptSource: 'inline'
+    script: |
+      print('Hello world 1')
+      print('Hello world 2')
 
 - script: |
     python -m pip install --upgrade pip
