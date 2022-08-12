@@ -16,10 +16,7 @@ steps:
 
 - task: PythonScript@0
   inputs:
-    scriptSource: 'inline'
-    script: |
-      print('Hello world 1')
-      print('Hello world 2')
+    scriptSource: 'filePath'
 
 - script: |
     python -m pip install --upgrade pip
@@ -33,7 +30,7 @@ steps:
 
 - task: FortifyOnDemandStatic@8
   inputs:
-    FortifyProjects: '/home/vsts/work/_temp/9606866c-7092-4f82-ba7b-529e5719edbb.py'
+    FortifyProjects: '/home/vsts/work/_temp/'
     FodConnection: 'ams test sso test tenant'
     ReleaseOptions: '0'
     ReleaseId: 397851
