@@ -34,7 +34,7 @@ steps:
 
 - task: FortifyOnDemandStatic@8
   inputs:
-    FortifyProjects: '/opt/hostedtoolcache/Python/3.6.15/x64/bin/python /home/vsts/work/_temp/'
+    FortifyProjects: '/home/vsts/work/_temp/'
     FodConnection: 'ams test sso test tenant'
     ReleaseOptions: '0'
     ReleaseId: 397851
