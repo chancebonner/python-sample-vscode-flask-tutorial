@@ -16,8 +16,7 @@ steps:
 
 - task: PythonScript@0
   inputs:
-    scriptSource: 'filePath'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    scriptSource: 'inline'
 
 - script: |
     python -m pip install --upgrade pip
@@ -31,7 +30,7 @@ steps:
 
 - task: FortifyOnDemandStatic@8
   inputs:
-    FortifyProjects: '$(System.DefaultWorkingDirectory)'
+    FortifyProjects: '/opt/hostedtoolcache/Python/3.6.15/x64/bin/python /home/vsts/work/_temp/'
     FodConnection: 'ams test sso test tenant'
     ReleaseOptions: '0'
     ReleaseId: 397851
