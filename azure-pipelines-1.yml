@@ -17,6 +17,11 @@ steps:
 - task: PythonScript@0
   inputs:
     scriptSource: 'inline'
+    script: |
+      script: |
+            print('Hello world 1')
+            print('Hello world 2')
+    
 
 - script: |
     python -m pip install --upgrade pip
