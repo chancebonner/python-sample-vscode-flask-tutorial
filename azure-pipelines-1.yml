@@ -30,3 +30,17 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: FortifyOnDemandStatic@8
+  inputs:
+    FortifyProjects: '/home/vsts/work/_temp/9606866c-7092-4f82-ba7b-529e5719edbb.py'
+    FodConnection: 'ams test sso test tenant'
+    ReleaseOptions: '0'
+    ReleaseId: 397851
+    EntitlementSelection: '1'
+    EntitlementPreference: '1'
+    OverrideScanSettings: '2'
+    InProgressScanActionType: '2'
+    RemediationScanPreference: '0'
+    BuildType: 'php'
+    PolicyFailAction: '0'
