@@ -43,5 +43,5 @@ steps:
     OverrideScanSettings: '2'
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
-    BuildType: 'php'
+    BuildType: 'none'
     PolicyFailAction: '0'
