@@ -60,5 +60,5 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
     BuildType: 'python'
-    PollingInterval: 0
-    PolicyFailAction: '0'
+    PollingInterval: 2
+    PolicyFailAction: 0
