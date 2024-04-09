@@ -41,12 +41,12 @@ steps:
     jdkArchitectureOption: x64
     jdkSourceOption: PreInstalled
 
-- task: BatchScript@1
-  displayName: 'Run script C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VSDevCmd.bat'
-  inputs:
-    filename: 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VSDevCmd.bat'
-    modifyEnvironment: true
-  enabled: false
+# task: BatchScript@1
+#---  displayName: 'Run script C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VSDevCmd.bat'
+#---  inputs:
+#---    filename: 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VSDevCmd.bat'
+#---    modifyEnvironment: true
+#---  enabled: false
 
 - task: FortifyOnDemandStatic@8
   inputs:
