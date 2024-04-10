@@ -15,6 +15,7 @@ steps:
   inputs:
     versionSource: 'spec'
     versionSpec: '6.x'
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.12'
