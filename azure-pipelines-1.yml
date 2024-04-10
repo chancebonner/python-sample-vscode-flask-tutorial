@@ -13,8 +13,12 @@ pool:
   vmImage: ubuntu-latest
 
 
-
 steps:
+- script: |
+    rmdir /s /q $(Agent.TempDirectory)
+  displayName: 'Clear Agent Cache'
+
+
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.12'
