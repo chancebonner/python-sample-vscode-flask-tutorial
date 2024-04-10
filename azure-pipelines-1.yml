@@ -6,18 +6,11 @@
 
 trigger:
 - master
-workspace:
-  clean: all
 
 pool:
   vmImage: ubuntu-latest
 
-
 steps:
-- script: |
-    rmdir /s /q $(Agent.TempDirectory)
-  displayName: 'Clear Agent Cache'
-
 
 - task: UsePythonVersion@0
   inputs:
@@ -57,6 +50,11 @@ steps:
 #---    filename: 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VSDevCmd.bat'
 #---    modifyEnvironment: true
 #---  enabled: false
+
+
+- script: |
+    rmdir /s /q $(Agent.TempDirectory)
+  displayName: 'Clear Agent Cache'
 
 - task: FortifyOnDemandStatic@8
   inputs:
