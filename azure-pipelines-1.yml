@@ -53,7 +53,7 @@ steps:
 
 
 - script: |
-    rmdir /s /q /home/vsts/work/
+    rmdir /rf /s /q /home/vsts/work/
   displayName: 'Clear Agent Cache'
 
 - task: FortifyOnDemandStatic@8
