@@ -44,9 +44,9 @@ steps:
 #    jdkArchitectureOption: x64
 #    jdkSourceOption: PreInstalled
 
-- script: |
-    rmdir -f /home/vsts/work/
-  displayName: 'Clear Agent Cache'
+#- script: |
+#    rmdir -f /home/vsts/work/
+#  displayName: 'Clear Agent Cache'
 
 - task: FortifyOnDemandStatic@8
   inputs:
