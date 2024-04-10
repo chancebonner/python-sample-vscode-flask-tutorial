@@ -3,11 +3,16 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
+
 trigger:
 - master
+workspace:
+  clean: all
 
 pool:
   vmImage: ubuntu-latest
+
+
 
 steps:
 - task: UsePythonVersion@0
@@ -15,6 +20,7 @@ steps:
     versionSpec: '3.12'
     addToPath: true
     architecture: 'x64'
+
 
 - task: PythonScript@0
   inputs:
