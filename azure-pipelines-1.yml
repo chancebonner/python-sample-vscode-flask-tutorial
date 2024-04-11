@@ -11,17 +11,18 @@ pool:
   vmImage: windows-2019
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSource: 'spec'
-    versionSpec: '6.x'
-
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.12'
     addToPath: true
     architecture: 'x64'
 
+- task: JavaToolInstaller@0
+  displayName: 'Use Java 11'
+  inputs:
+    versionSpec: 11
+    jdkArchitectureOption: x64
+    jdkSourceOption: PreInstalled
 
 - task: PythonScript@0
   inputs:
@@ -40,17 +41,6 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
-
-#- task: JavaToolInstaller@0
-#  displayName: 'Use Java 11'
-#  inputs:
-#    versionSpec: 11
-#    jdkArchitectureOption: x64
-#    jdkSourceOption: PreInstalled
-
-#- script: |
-#    rmdir -f /home/vsts/work/
-#  displayName: 'Clear Agent Cache'
 
 - task: FortifyOnDemandStatic@8
   inputs:
