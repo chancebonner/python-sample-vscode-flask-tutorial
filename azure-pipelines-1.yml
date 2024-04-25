@@ -43,7 +43,7 @@ steps:
 
 - task: FortifyOnDemandStatic@9
   inputs:
-    FortifyProjects: startup.py
+    FortifyProjects: /home/vsts/work/1/s
     FodConnection: 'ams test sso test tenant'
     ReleaseOptions: '0'
     ReleaseId: 397851
