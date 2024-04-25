@@ -18,9 +18,9 @@ steps:
     architecture: 'x64'
 
 - task: JavaToolInstaller@0
-  displayName: 'Use Java 11'
+  displayName: 'Use Java 18'
   inputs:
-    versionSpec: 11
+    versionSpec: 18
     jdkArchitectureOption: x64
     jdkSourceOption: PreInstalled
 
