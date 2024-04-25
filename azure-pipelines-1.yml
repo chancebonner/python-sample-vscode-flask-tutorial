@@ -52,7 +52,7 @@ steps:
     OverrideScanSettings: '2'
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
-    BuildType: 'python'
+    BuildType: python
     OpenSourceComponent: true
     PythonVirtualEnvironment: startup.py
     PythonRequirementsFile: requirements.txt
