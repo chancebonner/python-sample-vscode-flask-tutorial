@@ -53,6 +53,6 @@ steps:
     OverrideScanSettings: '2'
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
-    BuildType: python
+    BuildType: 'python'
     PollingInterval: '0'
     PolicyFailAction: '0'
