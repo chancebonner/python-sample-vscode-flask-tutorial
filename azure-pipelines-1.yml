@@ -53,6 +53,7 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
     BuildType: python
-    OpenSourceComponent: false
+    OpenSourceComponent: true
     PythonRequirementsFile: requirements.txt
     PolicyFailAction: 0
+    PollingInterval: 0
