@@ -31,7 +31,6 @@ steps:
       print('Hello world 1')
       print('Hello world 2')
     
-
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
@@ -54,5 +53,7 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
     BuildType: 'python'
-    PollingInterval: '0'
-    PolicyFailAction: '0'
+    OpenSourceComponent: true
+    PythonVirtualEnvironment: startup.py
+    PythonRequirementsFile: requirements.txt
+    PolicyFailAction: 0
