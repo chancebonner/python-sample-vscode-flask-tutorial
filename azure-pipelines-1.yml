@@ -42,7 +42,7 @@ steps:
     pytest
   displayName: 'pytest'
 
-- task: FortifyOnDemandStatic@8
+- task: FortifyOnDemandStatic@9
   inputs:
     FortifyProjects: '/home/vsts/work/_temp/'
     FodConnection: 'ams test sso test tenant'
