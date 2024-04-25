@@ -43,7 +43,7 @@ steps:
 
 - task: FortifyOnDemandStatic@9
   inputs:
-    FortifyProjects: '/home/vsts/work/_temp/'
+    FortifyProjects: startup.py
     FodConnection: 'ams test sso test tenant'
     ReleaseOptions: '0'
     ReleaseId: 397851
@@ -53,7 +53,6 @@ steps:
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
     BuildType: python
-    OpenSourceComponent: true
-    PythonVirtualEnvironment: startup.py
+    OpenSourceComponent: false
     PythonRequirementsFile: requirements.txt
     PolicyFailAction: 0
