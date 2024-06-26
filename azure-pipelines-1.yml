@@ -19,8 +19,8 @@ steps:
 
 - task: CmdLine@2
   displayName: '"Set JAVA_HOME_11_X64 to empty string" (Linux Agent)'
-  #inputs:
-  #  script: 'export JAVA_HOME_11_X64=""'
+  inputs:
+    script: 'export JAVA_HOME_11_X64=""'
   env:
     JAVA_HOME_11_X64: ''
 
