@@ -12,7 +12,7 @@ pool:
 
   steps:
   - script: |  # Optional script step (can be omitted)
-      echo "JAVA_HOME_11_X64 is set to: $JAVA_HOME_11_X64"
+      echo "JAVA_HOME_11_X64 is set to:''"
     displayName: "Set JAVA_HOME_11_X64 to empty string (Linux)"
 
 steps:
