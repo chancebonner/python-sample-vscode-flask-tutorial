@@ -10,17 +10,19 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-  steps:
-  - script: |  # Optional script step (can be omitted)
-      echo "JAVA_HOME_11_X64 is set to:''"
-    displayName: "Set JAVA_HOME_11_X64 to empty string (Linux)"
-
 steps:
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '3.12'
     addToPath: true
     architecture: 'x64'
+
+- task: CmdLine@2
+  displayName: '"Set JAVA_HOME_11_X64 to empty string" (Linux Agent)'
+  #inputs:
+  #  script: 'export JAVA_HOME_11_X64=""'
+  env:
+    JAVA_HOME_11_X64: ''
 
 - task: JavaToolInstaller@0
   displayName: 'Use Java 17'
