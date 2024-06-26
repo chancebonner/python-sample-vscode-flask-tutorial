@@ -3,6 +3,10 @@
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
+variables:
+- name: JAVA_HOME_11_X64
+  value:
+
 
 trigger:
 - master
@@ -16,13 +20,6 @@ steps:
     versionSpec: '3.12'
     addToPath: true
     architecture: 'x64'
-
-- task: CmdLine@2
-  displayName: '"Set JAVA_HOME_11_X64 to empty string" (Linux Agent)'
-  inputs:
-    script: 'export JAVA_HOME_11_X64=""'
-  env:
-    JAVA_HOME_11_X64: ''
 
 - task: JavaToolInstaller@0
   displayName: 'Use Java 17'
