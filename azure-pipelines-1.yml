@@ -7,7 +7,6 @@ variables:
 - name: JAVA_HOME_11_X64
   value:
 
-
 trigger:
 - master
 
