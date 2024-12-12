@@ -59,7 +59,7 @@ jobs:
         env:
           ### Required configuration when integrating with Fortify on Demand
           FOD_URL: https://fed.fortifygov.com
-          FOD_CLIENTID: '05fb89af-9f4f-4393-8062-798dc5491bfe'
+          FOD_CLIENT_ID: '05fb89af-9f4f-4393-8062-798dc5491bfe'
           FOD_SECRET: 'Zk82RlVfdUkwNFtERkRGVGFWSXYkMHc2WFVPcXVN0'
           #FOD_PASSWORD: ${{secrets.FOD_PAT}}
           ### Optional configuration when integrating with Fortify on Demand
