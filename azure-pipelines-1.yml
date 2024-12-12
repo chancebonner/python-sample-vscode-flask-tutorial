@@ -47,17 +47,16 @@ steps:
 
 - task: FortifyOnDemandStatic@9
   inputs:
-    FortifyProjects: /home/vsts/work/1/s
-    FodConnection: 'ams test sso test tenant'
+    FortifyProjects: '/home/vsts/work/1/s'
+    FodConnection: 'FOD Fedramp'
     ReleaseOptions: '0'
-    ReleaseId: 397851
+    ReleaseId: 21311
     EntitlementSelection: '1'
     EntitlementPreference: '1'
+    PurchaseEntitlements: true
     OverrideScanSettings: '2'
     InProgressScanActionType: '2'
     RemediationScanPreference: '0'
-    BuildType: python
-    OpenSourceComponent: true
-    PythonRequirementsFile: requirements.txt
-    PolicyFailAction: 0
+    BuildType: 'none'
     PollingInterval: 0
+    PolicyFailAction: '0'
